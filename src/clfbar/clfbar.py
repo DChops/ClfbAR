@@ -13,9 +13,8 @@ class CarClassifier(BaseEstimator):
         else:
             return self.minconf[name]
 
-    def fit(self,X,y):
-        # Check that X.shape[0]==y.shape[0] 
-        # X, y = check_X_y(X, y)
+    def fit(self,X,y): 
+        X, y = check_X_y(X, y)
         self.X_ = X
         self.y_ = y
 
