@@ -1,6 +1,7 @@
 # ClfbAR
 
 **Classification By Association Rules Mining (CARS) Algorithm**
+
 Algorithm adapted from *Liu et al. 1998*
 
 ### Features of our CARS Classifier:
