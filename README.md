@@ -54,6 +54,13 @@ transformed_data = equal_freq_binner(data_frame, bins=5)
 ```
 
 ### Instalation: 
+
+**Using pypi(preferred)**
+```python
+pip install -i https://test.pypi.org/simple/ clfbar==0.0.2
+```
+
+**Using github**
 ```python
 git clone https://github.com/DChops/ClfbAR.git
 ```
