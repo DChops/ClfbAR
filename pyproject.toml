@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 name = "clfbar"
 version = "0.0.1"
 authors = [
-  { name="Dhruv Chopra", email="dhruvchops@gmail.com" },
+  { name="Dhruv Chopra", email="dhruvchops@gmail.com" }
 ]
 description = "Classification By Association Rules Mining (CARS) Algorithm"
 readme = "README.md"

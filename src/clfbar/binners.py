@@ -5,7 +5,8 @@ import pandas as pd
 def equal_freq_binner(dat: pd.DataFrame, bins: int) -> pd.DataFrame:
     data = pd.DataFrame(columns=dat.columns)
     for i in dat.columns:
-        data[i] = pd.qcut(dat[i], q=bins, precision=0, labels=["cat"+str(i) for i in range(bins)])
+        data[i] = pd.qcut(dat[i], q=bins, precision=0, labels=[ "cat"+str(i) for i in range(bins)])
+    return data
 
 class jenks_binner:
     def __init__(self, MAX_CLASSES:int=10, THRESHOLD:int=0.8):
@@ -41,7 +42,7 @@ class jenks_binner:
     def fit(self, ser: pd.Series) -> pd.Series:
         var = ser
         var_notna = var[var.notna()]
-        var_= self.binit(var_notna,self.MAXCAT)
+        var_= self.binit(var_notna)
         var_cleaned = []
         counter = 0
         for i in range(len(var)):

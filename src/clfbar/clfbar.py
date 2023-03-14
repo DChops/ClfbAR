@@ -1,5 +1,5 @@
 from sklearn.base import BaseEstimator
-from sklearn.utils.validation import check_X_y, check_is_fitted
+from sklearn.utils.validation import check_is_fitted
 import pandas as pd
 
 class CarClassifier(BaseEstimator):
@@ -13,8 +13,7 @@ class CarClassifier(BaseEstimator):
         else:
             return self.minconf[name]
 
-    def fit(self,X,y): 
-        X, y = check_X_y(X, y)
+    def fit(self,X,y):
         self.X_ = X
         self.y_ = y
 

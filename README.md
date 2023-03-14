@@ -4,7 +4,7 @@
 
 Algorithm adapted from *Liu et al. 1998*
 
-### Features of our CARS Classifier:
+### Features of our CARS Classifier: 
 
 * High explainability in the form of Decision Rules
 * Achieves comparable perfromance to more advanced classifiers on small datasets (See Benchmarks)
@@ -15,7 +15,7 @@ Algorithm adapted from *Liu et al. 1998*
 
 **Using CARS Classifier**
 ```python
-from clfbar import CarClassifier
+from clfbar.clfbar import CarClassifier
 
 ### Set MinSup and MinConf or use defaults
 c = CarClassifier(0.8,0.6)
@@ -36,8 +36,10 @@ Transform Pandas Series from numeric dtypes into categoriecal dtype
 
 1. Use Fisher-Jenks Binning Algorithm
 ```python
+from clfbar.binners import jenks_binner
+
 ### Set MAX_CLASSES & THRESHOLD or use default values
-jnb = jenks_binner(5, 10)
+jnb = jenks_binner(5, 0.8)
 
 ### Fit and Transform numeric data into categorries
 transformed_ser = jnb.fit(ser)
@@ -48,7 +50,7 @@ transformed_test_ser = jnb.transform(test_ser)
 
 2. Use Equal Frequency Binning
 ```python
-transformed_data = equal_freq_binner(data_frame, bins=10)
+transformed_data = equal_freq_binner(data_frame, bins=5)
 ```
 
 ### Instalation: 
